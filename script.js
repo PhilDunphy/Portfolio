@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	path.forEach(line => lettersScene.add(line))
 	const textContainer = document.querySelector('.text-container')
 	const letterPositions = /* @__PURE__ */ new Map()
-	const letterCount = window.innerWidth < 768 ? 7 : 15
+	const letterCount = window.innerWidth < 768 ? 11 : 15
 	path.forEach((line, i) => {
 		line.letterElements = Array.from({ length: letterCount }, () => {
 			const el = document.createElement('div')
