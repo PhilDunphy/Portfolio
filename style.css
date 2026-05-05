@@ -370,10 +370,17 @@ canvas {
   right: 0;
   width: 65%;
   height: 100vh;
-  background: rgba(13, 13, 13, 0.82);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  backdrop-filter: blur(24px) saturate(1.4);
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.06) 40%,
+    rgba(13, 13, 13, 0.55) 100%
+  );
+  -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+  backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.12);
   color: #f0f0f0;
   z-index: 100;
   transform: translateX(100%);
@@ -394,7 +401,7 @@ canvas {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .panel-title {
@@ -437,30 +444,46 @@ canvas {
   padding: 1rem 1.25rem;
   cursor: pointer;
   user-select: none;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.04) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  transition: background 0.3s ease, border-color 0.3s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+              0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 0.5rem;
 }
 
 .panel-section-header:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+              0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .panel-section.open .panel-section-header {
-  background: rgba(244, 12, 63, 0.1);
-  border-color: rgba(244, 12, 63, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(244, 12, 63, 0.15) 0%,
+    rgba(244, 12, 63, 0.05) 100%
+  );
+  border-color: rgba(244, 12, 63, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08),
+              0 2px 12px rgba(244, 12, 63, 0.12);
   margin-bottom: 0;
   border-radius: 10px 10px 0 0;
 }
 
 .panel-arrow {
   font-size: 1.4rem;
-  color: #888;
+  color: rgba(255, 255, 255, 0.5);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
               color 0.35s ease;
   transform: rotate(0deg);
@@ -477,7 +500,7 @@ canvas {
   transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding: 0 1.25rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid transparent;
   border-top: none;
   border-radius: 0 0 10px 10px;
@@ -486,7 +509,7 @@ canvas {
 .panel-section.open .panel-section-body {
   max-height: 500px;
   padding: 1.25rem;
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 0.5rem;
 }
 
