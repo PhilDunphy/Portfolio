@@ -518,6 +518,11 @@ canvas {
   }
 
 
+  .card {
+    width: 25%;
+    height: 80%;
+  }
+
   .card-copy {
     font-size: 1rem;
   }
