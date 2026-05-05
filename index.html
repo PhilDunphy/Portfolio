@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Component Demo</title>
+
+   <!-- Connected Styles -->
+   <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <!-- ===== HTML ===== -->
+   <div  class="index">
+      <section class="intro">
+         <div class="intro-left">
+            <img class="profile-pic" src="./img/profile.png" alt="Arnav Petwal">
+            <h1 class="intro-name">Arnav Petwal</h1>
+            <p class="intro-bio">"I enrolled in ECE to understand how systems work. What I didn't expect was to become far more obsessed with why organizations fail to use them well — or why a well-built product never quite figures out where it makes its money. That question pulled me from circuit boards into case competitions — and from ML pipelines into financial models, product breakdowns, and revenue architecture. I want to be the person in the room who can trace a business from its core product to its P&L, and find what's being left on the table. I'm an engineer by training, an analyst by instinct, and I'm looking for the role that makes that the job."</p>
+            <div class="scroll-indicator">↓ scroll to explore</div>
+         </div>
+         <div class="intro-right">
+            <div class="achievement-cards">
+               <div class="achieve-card">
+                  <span class="achieve-icon">🏆</span>
+                  <span class="achieve-text">Top 100 Nationwide · ZS Campus Beats</span>
+               </div>
+               <div class="achieve-card">
+                  <span class="achieve-icon">🚀</span>
+                  <span class="achieve-text">Semi-finalist · Bain & Company BrainWars</span>
+               </div>
+               <div class="achieve-card">
+                  <span class="achieve-icon">💼</span>
+                  <span class="achieve-text">Executive Board · MarkFin, TIET</span>
+               </div>
+            </div>
+            <div class="skill-tags">
+               <span class="skill-tag">Financial Modelling</span>
+               <span class="skill-tag">Sensitivity Analysis</span>
+               <span class="skill-tag">Excel</span>
+               <span class="skill-tag">Python</span>
+               <span class="skill-tag">SQL</span>
+               <span class="skill-tag">Tableau</span>
+            </div>
+         </div>
+      </section>
+      <section class="work">
+         <div class="text-container"></div>
+         <div class="cards">
+            <div class="card" data-company="Amazon">
+               <div class="card-img">
+                  <img src="./img/Amazon_Build_Day-Photoroom.png" alt="Amazon">
+               </div>
+               <div class="card-copy">
+                  <p>Amazon</p>
+               </div>
+            </div>
+            <div class="card" data-company="Apple">
+               <div class="card-img">
+                  <img src="./img/Apple_Build_Day-Photoroom.png" alt="Apple">
+               </div>
+               <div class="card-copy">
+                  <p>Apple</p>
+               </div>
+            </div>
+            <div class="card" data-company="Nike">
+               <div class="card-img">
+                  <img src="./img/Nike_Build_Day-Photoroom.png" alt="Nike">
+               </div>
+               <div class="card-copy">
+                  <p>Nike</p>
+               </div>
+            </div>
+            <div class="card" data-company="Zomato">
+               <div class="card-img">
+                  <img src="./img/Zomato_Build_DAY-Photoroom.png" alt="Zomato">
+               </div>
+               <div class="card-copy">
+                  <p>Zomato</p>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="outro">
+         <div class="outro-content">
+            <h2 class="outro-closing">"The numbers have a story. Let's find it together."</h2>
+            <div class="college-cards">
+               <div class="college-card">
+                  <span class="college-text">Thapar Institute of Engineering and Technology, Patiala</span>
+               </div>
+               <div class="college-card">
+                  <span class="college-text">B.E. Electronics and Communication Engineering</span>
+               </div>
+            </div>
+            <div class="contact-buttons">
+               <a class="contact-btn" href="mailto:arnav.petwal@gmail.com">📧 arnav.petwal@gmail.com</a>
+               <a class="contact-btn" href="https://www.linkedin.com/in/arnav-petwal-b95929202/" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+               <a class="contact-btn" href="https://drive.google.com/file/d/1IbJTJrb-2ejljbsuH1x7bE_52xd2Pixf/view?usp=sharing" target="_blank" rel="noopener noreferrer">📄 Resume</a>
+               <a class="contact-btn" href="tel:+918218638562">📞 +91 82186 38562</a>
+            </div>
+         </div>
+      </section>
+   </div>
+   
+   <!-- Analysis Panel & Overlay -->
+   <div class="overlay"></div>
+   <div class="analysis-panel">
+      <div class="panel-header">
+         <h2 class="panel-title">Company Name</h2>
+         <button class="panel-close">✕</button>
+      </div>
+      <div class="panel-content">
+         <div class="panel-section">
+            <span class="panel-chip">Overview</span>
+            <p>Your overview analysis goes here.</p>
+         </div>
+         <div class="panel-section">
+            <span class="panel-chip">Revenue & Financials</span>
+            <p>Your revenue analysis goes here.</p>
+         </div>
+         <div class="panel-section">
+            <span class="panel-chip">Strengths</span>
+            <p>Your strengths analysis goes here.</p>
+         </div>
+         <div class="panel-section">
+            <span class="panel-chip">Weaknesses & Risks</span>
+            <p>Your weaknesses analysis goes here.</p>
+         </div>
+      </div>
+   </div>
+   <!-- ======================= -->
+   
+   <!-- Connected libs -->
+   <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js?v=1770651903713"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js?v=1770651903713"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js?v=1770651903713"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js?v=1770651903713"></script>
+
+   <!-- Connected script -->
+   <script src="script.js"></script>
+</body>
+
+</html>
