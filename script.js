@@ -233,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const closePanel = () => {
 		lenis.start()
+		panel.querySelectorAll('.panel-section.open').forEach(s => s.classList.remove('open'))
 		gsap.to(overlay, { opacity: 0, pointerEvents: 'none', duration: 0.5, ease: 'power3.inOut' })
 		gsap.to(panel, { x: '100%', duration: 0.5, ease: 'power3.inOut' })
 	}
@@ -246,6 +247,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	panelClose.addEventListener('click', closePanel)
 	overlay.addEventListener('click', closePanel)
+
+	// --- Accordion Toggle ---
+	document.querySelectorAll('.panel-section-header').forEach(header => {
+		header.addEventListener('click', () => {
+			header.parentElement.classList.toggle('open')
+		})
+	})
 
 	// --- Outro Animations (ScrollTrigger) ---
 	const outroTl = gsap.timeline({

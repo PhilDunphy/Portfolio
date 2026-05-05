@@ -428,8 +428,49 @@ canvas {
 .panel-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-section:last-child {
+  border-bottom: none;
+}
+
+.panel-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
+}
+
+.panel-section-header:hover {
+  opacity: 0.75;
+}
+
+.panel-arrow {
+  font-size: 1.4rem;
+  color: #888;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(0deg);
+}
+
+.panel-section.open .panel-arrow {
+  transform: rotate(90deg);
+}
+
+.panel-section-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 0;
+}
+
+.panel-section.open .panel-section-body {
+  max-height: 500px;
+  padding: 0 0 1.25rem 0;
 }
 
 .panel-chip {
@@ -441,6 +482,12 @@ canvas {
   border: 1px solid #555;
   border-radius: 100px;
   color: #aaa;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.panel-section.open .panel-chip {
+  border-color: #f40c3f;
+  color: #f0f0f0;
 }
 
 .panel-section p {
