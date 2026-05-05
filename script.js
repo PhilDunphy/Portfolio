@@ -380,6 +380,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
+	// --- Prevent Lenis from hijacking panel scroll ---
+	panel.addEventListener('wheel', (e) => { e.stopPropagation() }, { passive: true })
+	panel.addEventListener('touchmove', (e) => { e.stopPropagation() }, { passive: true })
+
 	// --- Outro Animations (ScrollTrigger) ---
 	const outroTl = gsap.timeline({
 		scrollTrigger: {
