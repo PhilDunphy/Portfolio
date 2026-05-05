@@ -474,6 +474,10 @@ canvas {
 
 /* ===== RESPONSIVE: MOBILE (768px) ===== */
 @media (max-width: 768px) {
+  .letter[data-char="W"] {
+    font-size: 11rem;
+  }
+
   .profile-pic {
     width: 150px;
     height: 150px;

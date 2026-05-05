@@ -127,10 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	const textContainer = document.querySelector('.text-container')
 	const letterPositions = /* @__PURE__ */ new Map()
 	path.forEach((line, i) => {
+		const char = ['W', 'O', 'R', 'K'][i]
 		line.letterElements = Array.from({ length: 15 }, () => {
 			const el = document.createElement('div')
 			el.className = 'letter'
-			el.textContent = ['W', 'O', 'R', 'K'][i]
+			el.textContent = char
+			el.dataset.char = char
 			textContainer.appendChild(el)
 			letterPositions.set(el, {
 				current: { x: 0, y: 0 },
