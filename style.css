@@ -507,7 +507,7 @@ canvas {
 }
 
 .panel-section.open .panel-section-body {
-  max-height: 500px;
+  max-height: 3000px;
   padding: 1.25rem;
   border-color: rgba(255, 255, 255, 0.1);
   margin-bottom: 0.5rem;
