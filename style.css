@@ -520,11 +520,6 @@ canvas {
     font-size: 9rem;
   }
 
-  .card {
-    width: 55%;
-    height: 55%;
-  }
-
   .card-copy {
     font-size: 1rem;
   }
@@ -610,11 +605,6 @@ canvas {
 
   .letter {
     font-size: 7rem;
-  }
-
-  .card {
-    width: 65%;
-    height: 50%;
   }
 
   .card-copy {

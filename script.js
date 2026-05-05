@@ -126,8 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	path.forEach(line => lettersScene.add(line))
 	const textContainer = document.querySelector('.text-container')
 	const letterPositions = /* @__PURE__ */ new Map()
+	const letterCount = window.innerWidth < 768 ? 7 : 15
 	path.forEach((line, i) => {
-		line.letterElements = Array.from({ length: 15 }, () => {
+		line.letterElements = Array.from({ length: letterCount }, () => {
 			const el = document.createElement('div')
 			el.className = 'letter'
 			el.textContent = ['W', 'O', 'R', 'K'][i]
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		path.forEach((line, lineIndex) => {
 			line.letterElements.forEach((element, i) => {
 				const point = line.curve.getPoint(
-					(i / 14 + scrollProgress * lineSpeedMultipliers[lineIndex]) % 1,
+					(i / (letterCount - 1) + scrollProgress * lineSpeedMultipliers[lineIndex]) % 1,
 				)
 				const vector = point.clone().project(lettersCamera)
 				const positions = letterPositions.get(element)
