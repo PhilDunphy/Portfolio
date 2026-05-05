@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	gsap.ticker.lagSmoothing(0)
 	const workSection = document.querySelector('.work')
 	const cardsContainer = document.querySelector('.cards')
-	const moveDistance = window.innerWidth * 5
+	let moveDistance = window.innerWidth * 5
 	let currentXPosition = 0
 	const lerp = (start, end, t) => start + (end - start) * t
 	const gridCanvas = document.createElement('canvas')
@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	animate()
 	updateTargetPositions(0)
 	window.addEventListener('resize', () => {
+		moveDistance = window.innerWidth * 5
 		resizeGridCanvas()
 		drawGrid(ScrollTrigger.getAll()[0]?.progress || 0)
 		lettersCamera.aspect = window.innerWidth / window.innerHeight
