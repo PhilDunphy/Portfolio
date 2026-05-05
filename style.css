@@ -466,9 +466,6 @@ canvas {
     font-size: 0.95rem;
   }
 
-  .letter {
-    font-size: 12rem;
-  }
 
   .analysis-panel {
     width: 55%;
@@ -516,9 +513,6 @@ canvas {
     padding: 0.35rem 0.65rem;
   }
 
-  .letter {
-    font-size: 9rem;
-  }
 
   .card-copy {
     font-size: 1rem;
@@ -603,9 +597,6 @@ canvas {
     padding: 0.3rem 0.55rem;
   }
 
-  .letter {
-    font-size: 7rem;
-  }
 
   .card-copy {
     font-size: 0.85rem;
