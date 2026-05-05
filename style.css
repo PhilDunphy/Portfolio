@@ -358,7 +358,7 @@ canvas {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.45);
   opacity: 0;
   pointer-events: none;
   z-index: 99;
@@ -368,9 +368,12 @@ canvas {
   position: fixed;
   top: 0;
   right: 0;
-  width: 45%;
+  width: 65%;
   height: 100vh;
-  background-color: #0d0d0d;
+  background: rgba(13, 13, 13, 0.82);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  backdrop-filter: blur(24px) saturate(1.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
   color: #f0f0f0;
   z-index: 100;
   transform: translateX(100%);
@@ -468,7 +471,7 @@ canvas {
 
 
   .analysis-panel {
-    width: 55%;
+    width: 75%;
   }
 }
 
